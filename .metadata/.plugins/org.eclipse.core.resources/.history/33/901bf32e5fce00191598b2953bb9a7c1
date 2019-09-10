@@ -1,0 +1,37 @@
+package solution_tutorial1;
+
+import java.util.Scanner;
+
+public class week1_3 {
+	private static boolean cycleHas(int n, int x) {
+		if (n == x)
+			return true;
+		while (n != 1) {
+			if (n % 2 == 0)
+				n /= 2;
+			else
+				n = 3 * n + 1;
+			if (n == x)
+				return true;
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		while (input.hasNextInt()) {
+			int n = input.nextInt();
+			int x = input.nextInt();
+
+			if (n > x) {
+				int temp;
+				temp = n;
+				n = x;
+				x = temp;
+			}
+			System.out.print(n+x);
+		}
+		input.close();
+	}
+}
