@@ -1,0 +1,17 @@
+package solution_tutorial2;
+
+import java.util.Scanner;
+
+public class week2_3_1ver {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String str =null;
+		while(input.hasNext('E')) {
+			str = input.nextLine();
+			System.out.println("str");
+		}
+
+	}
+
+}
