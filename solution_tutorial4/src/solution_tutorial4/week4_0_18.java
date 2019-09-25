@@ -8,7 +8,8 @@ public class week4_0_18 {
 	    int[] di = {-1, -1, -1, 0, 1, 1, 1, 0};
 	    int[] dj = {-1, 0, 1, 1, 1, 0, -1, -1};
 	    int i, j, t, dir;
-
+int m=0,n=0;
+int[][]a=new int[6][6];
 	    for (dir = 0; dir < 8; dir++) {
 	        i = start_i;
 	        j = start_j;
@@ -27,13 +28,19 @@ public class week4_0_18 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		char[][] str = new char[5][11];
-		while(input.hasNext()) {
-			String a = input.next();
-			str[0] = a;
-		}
 		
-		input.close();
+		String line = input.nextLine();
+		
+		String[] words = line.split(" ");
+		
+		String[][] base = new String[1][6];
+		
+		base[0] = words;
+		
+		for (int i = 0; i < 6; i++)
+		{
+			System.out.print(base[0][i] + " ");
+		}
 	}
 
 }
